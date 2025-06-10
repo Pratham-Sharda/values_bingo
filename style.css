@@ -75,6 +75,32 @@ header p {
     padding: 20px;
     overflow-x: auto;
     min-width: 100%;
+    position: relative;
+}
+
+/* Scroll indicator for mobile */
+@media (max-width: 768px) {
+    .bingo-board::after {
+        content: "← Swipe to see all columns →";
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 82, 204, 0.9);
+        color: white;
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 0.7rem;
+        font-weight: 500;
+        z-index: 10;
+        animation: fadeInOut 4s ease-in-out infinite;
+        pointer-events: none;
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
 }
 
 .column-headers {
@@ -82,7 +108,7 @@ header p {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 15px;
-    min-width: 600px;
+    min-width: 800px;
 }
 
 .header {
@@ -100,7 +126,7 @@ header p {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 30px;
-    min-width: 600px;
+    min-width: 800px;
 }
 
 .bingo-cell {
@@ -116,6 +142,7 @@ header p {
     justify-content: center;
     text-align: center;
     min-height: 120px;
+    min-width: 120px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -312,12 +339,12 @@ header p {
     }
 
     .column-headers {
-        min-width: 500px;
+        min-width: 700px;
         gap: 8px;
     }
 
     .bingo-grid {
-        min-width: 500px;
+        min-width: 700px;
         gap: 8px;
     }
 
@@ -382,12 +409,12 @@ header p {
     }
 
     .column-headers {
-        min-width: 450px;
+        min-width: 650px;
         gap: 6px;
     }
 
     .bingo-grid {
-        min-width: 450px;
+        min-width: 650px;
         gap: 6px;
     }
 
@@ -444,11 +471,11 @@ header p {
 /* Extra small devices */
 @media (max-width: 360px) {
     .column-headers {
-        min-width: 400px;
+        min-width: 600px;
     }
 
     .bingo-grid {
-        min-width: 400px;
+        min-width: 600px;
     }
 
     .bingo-cell {
