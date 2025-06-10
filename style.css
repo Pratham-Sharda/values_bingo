@@ -4,11 +4,43 @@
     box-sizing: border-box;
 }
 
+/* Smooth scrolling for all devices */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better touch scrolling for mobile */
+.bingo-board {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 82, 204, 0.3) transparent;
+}
+
+/* Custom scrollbar for webkit browsers */
+.bingo-board::-webkit-scrollbar {
+    height: 8px;
+}
+
+.bingo-board::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.bingo-board::-webkit-scrollbar-thumb {
+    background: rgba(0, 82, 204, 0.3);
+    border-radius: 4px;
+}
+
+.bingo-board::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 82, 204, 0.5);
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0052CC 0%, #0747A6 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 10px;
+    overflow-x: auto;
 }
 
 .container {
@@ -18,6 +50,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    min-width: 320px;
 }
 
 header {
@@ -39,7 +72,9 @@ header p {
 }
 
 .bingo-board {
-    padding: 30px;
+    padding: 20px;
+    overflow-x: auto;
+    min-width: 100%;
 }
 
 .column-headers {
@@ -47,6 +82,7 @@ header p {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 15px;
+    min-width: 600px;
 }
 
 .header {
@@ -64,6 +100,7 @@ header p {
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     margin-bottom: 30px;
+    min-width: 600px;
 }
 
 .bingo-cell {
@@ -247,52 +284,184 @@ header p {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
     .container {
-        margin: 10px;
+        margin: 5px;
         border-radius: 10px;
     }
-    
+
+    header {
+        padding: 20px 15px;
+    }
+
     header h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-    
+
+    header p {
+        font-size: 1rem;
+    }
+
     .bingo-board {
-        padding: 20px;
+        padding: 15px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
-    
+
+    .column-headers {
+        min-width: 500px;
+        gap: 8px;
+    }
+
+    .bingo-grid {
+        min-width: 500px;
+        gap: 8px;
+    }
+
     .bingo-cell {
-        min-height: 100px;
-        padding: 10px;
+        min-height: 90px;
+        padding: 8px;
     }
-    
+
     .task-text {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        line-height: 1.2;
     }
-    
+
     .header {
-        font-size: 0.8rem;
-        padding: 10px 5px;
+        font-size: 0.75rem;
+        padding: 8px 4px;
     }
-    
+
+    .legend {
+        padding: 20px 15px;
+    }
+
     .legend-items {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
+    }
+
+    .legend-item {
+        padding: 8px 12px;
+    }
+
+    .status {
+        padding: 20px 15px;
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        padding: 3px;
+    }
+
+    .container {
+        margin: 3px;
+        border-radius: 8px;
+    }
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .bingo-board {
+        padding: 10px;
+    }
+
+    .column-headers {
+        min-width: 450px;
+        gap: 6px;
+    }
+
+    .bingo-grid {
+        min-width: 450px;
+        gap: 6px;
+    }
+
     .bingo-cell {
-        min-height: 80px;
-        padding: 8px;
+        min-height: 75px;
+        padding: 6px;
     }
-    
+
     .task-text {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        line-height: 1.1;
     }
-    
+
+    .header {
+        font-size: 0.7rem;
+        padding: 6px 3px;
+    }
+
     .tick-mark {
-        width: 25px;
-        height: 25px;
+        width: 22px;
+        height: 22px;
+        font-size: 1rem;
+        top: 5px;
+        right: 5px;
+    }
+
+    .legend {
+        padding: 15px 10px;
+    }
+
+    .legend h3 {
         font-size: 1.2rem;
+    }
+
+    .legend-item {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .status {
+        padding: 15px 10px;
+    }
+
+    .win-message {
+        font-size: 1.2rem;
+    }
+
+    .reset-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .column-headers {
+        min-width: 400px;
+    }
+
+    .bingo-grid {
+        min-width: 400px;
+    }
+
+    .bingo-cell {
+        min-height: 70px;
+        padding: 5px;
+    }
+
+    .task-text {
+        font-size: 0.6rem;
+    }
+
+    .header {
+        font-size: 0.65rem;
+        padding: 5px 2px;
     }
 }
