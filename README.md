@@ -13,7 +13,6 @@ A fun and interactive bingo game based on Atlassian's core values.
   - Complete the full card (all 25 squares)
 - **Visual Feedback**: Winning combinations are highlighted with animations
 - **Persistent State**: Your progress is automatically saved in browser storage
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
 - **Reset Functionality**: Start fresh anytime with the reset button
 
 ## 🎨 Atlassian Values Covered
