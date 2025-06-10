@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlassian Values Bingo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Values Bingo</h1>
+            <p>Mark your experiences and complete the Values bingo!</p>
+        </header>
+
+        <div class="bingo-board">
+            <div class="column-headers">
+                <div class="header open-company">Open company, no bullshit</div>
+                <div class="header build-heart">Build with heart and balance</div>
+                <div class="header dont-customer">Don't #@!% the customer</div>
+                <div class="header play-team">Play, as a team</div>
+                <div class="header be-change">Be the change you seek</div>
+            </div>
+
+            <div class="bingo-grid" id="bingoGrid">
+                <!-- Row 1 -->
+                <div class="bingo-cell open-company" data-row="0" data-col="0">
+                    <span class="task-text">Experienced no gatekeeping as an intern</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell build-heart" data-row="0" data-col="1">
+                    <span class="task-text">Asked for feedback and actually used it</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell dont-customer" data-row="0" data-col="2">
+                    <span class="task-text">Identified your customer and their needs</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell play-team" data-row="0" data-col="3">
+                    <span class="task-text">Team covered sick colleague without complaints</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell be-change" data-row="0" data-col="4">
+                    <span class="task-text">Respect your team for getting respect</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="bingo-cell open-company" data-row="1" data-col="0">
+                    <span class="task-text">Found solution outside my team</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell build-heart" data-row="1" data-col="1">
+                    <span class="task-text">"Measure twice, cut once" saved my project</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell dont-customer" data-row="1" data-col="2">
+                    <span class="task-text">Asked "How does this help users?"</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell play-team" data-row="1" data-col="3">
+                    <span class="task-text">Included in meetings as equal</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell be-change" data-row="1" data-col="4">
+                    <span class="task-text">Treated others' ideas seriously first to make sure your voice is heard too</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="bingo-cell open-company" data-row="2" data-col="0">
+                    <span class="task-text">Learned from someone's documentation</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell build-heart" data-row="2" data-col="1">
+                    <span class="task-text">Weekly play sessions keeps work life balance</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell dont-customer" data-row="2" data-col="2">
+                    <span class="task-text">Chose customer convenience over shortcuts</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell play-team" data-row="2" data-col="3">
+                    <span class="task-text">Got hyped by teammates as if they are cheerleaders</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell be-change" data-row="2" data-col="4">
+                    <span class="task-text">Documented learnings and shared them</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="bingo-cell open-company" data-row="3" data-col="0">
+                    <span class="task-text">Built connections across teams</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell build-heart" data-row="3" data-col="1">
+                    <span class="task-text">Passionate team discussions about work</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell dont-customer" data-row="3" data-col="2">
+                    <span class="task-text">Learnt from team how do they ensure this</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell play-team" data-row="3" data-col="3">
+                    <span class="task-text">Played with team [literally] a game or something</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell be-change" data-row="3" data-col="4">
+                    <span class="task-text">Speaking politely to be spoken the same way</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="bingo-cell open-company" data-row="4" data-col="0">
+                    <span class="task-text">Messaged someone senior and got a quick reply</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell build-heart" data-row="4" data-col="1">
+                    <span class="task-text">Constructive criticism with genuine care</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell dont-customer" data-row="4" data-col="2">
+                    <span class="task-text">Suggested/implemented UX improvement</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell play-team" data-row="4" data-col="3">
+                    <span class="task-text">Got pointed the blind spots that were overlooked</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+                <div class="bingo-cell be-change" data-row="4" data-col="4">
+                    <span class="task-text">Gave kudos to someone who helped you</span>
+                    <div class="tick-mark">✓</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="legend">
+            <h3>Atlassian Values Legend</h3>
+            <div class="legend-items">
+                <div class="legend-item">
+                    <div class="legend-color open-company"></div>
+                    <span>Open company, no bullshit</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color build-heart"></div>
+                    <span>Build with heart and balance</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color dont-customer"></div>
+                    <span>Don't #@!% the customer</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color play-team"></div>
+                    <span>Play, as a team</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color be-change"></div>
+                    <span>Be the change you seek</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="status">
+            <div id="winMessage" class="win-message"></div>
+            <button id="resetButton" class="reset-button">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
